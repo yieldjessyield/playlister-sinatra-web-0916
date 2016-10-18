@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head><h1>Artist</h1>
+  <h2><%=@artist.name%></h2>
+  <body>
+  <a href="/songs/<%@artist.songs.each do |s|%><%=s.slug%><%end%>"><p><%@artist.songs.each do |s|%><%=s.name%><%end%></p></a>
+
+  <a href="/genres/<%@artist.genres.each do |g|%><%=g.slug%><%end%>">
+      <p><%@artist.genres.each do |g|%><%=g.name%><%end%>
